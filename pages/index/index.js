@@ -19,6 +19,19 @@ Page({
         value: '',
         title: '到',
         placeholder: '到哪儿去'
+      },
+      {
+        type:'lx-picker',
+        pickerData:{
+          date:'date',
+          dateValue:'2019-9-1',
+          dateStart:'2000-1-1',
+          dateEnd:'2050-1-1',
+          time:'time',
+          timeValue:'00:00',
+          timeStart:'00:00',
+          timeEnd:'23:59'
+        }
       }
     ]
   },
@@ -29,7 +42,8 @@ Page({
     })
   },
   handleChange:function({detail}){
-    console.log(detail)
+
+    console.log(this.current)
     this.setData({
       current:detail.key
     })
@@ -75,7 +89,7 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
+    console.log(this.data.current)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,

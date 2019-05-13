@@ -1,2 +1,6 @@
 /* components/formComponents/lx-picker/lx-picker.wxss */
-.picker-wrap{display: flex;flex-direction: row}
+.picker-wrap{display: flex;}
+view.formPanel--picker-item{
+  width:200px;
+  border:1px solid #ccc;
+}

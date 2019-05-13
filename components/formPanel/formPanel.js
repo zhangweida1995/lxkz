@@ -1,5 +1,10 @@
 // components/formPanel.js
 Component({
+  lifetimes:{
+    attached(){
+      console.log(this.data.imports)
+    }
+  },
   /**
    * 组件的属性列表
    */
@@ -14,8 +19,8 @@ Component({
    */
   data: {
     imports:[
-      "/components/formComponents/lx-input/lx-input.wxml",
-      "/components/formComponents/lx-picker/lx-picker.wxml"
+      { url: "/components/formComponents/lx-input/lx-input.wxml" },
+      { url: "/components/formComponents/lx-picker/lx-picker.wxml"}
     ]
   },
 
