@@ -1,0 +1,15 @@
+<!--components/formComponents/lx-picker/lx-picker.wxml-->
+<template name="lx-picker">
+    <view class='picker-wrap'>
+      <view class='picker-item'>
+        <picker mode="pickerData.date" value="{{pickerData.dateValue}}" start="{{pickerData.dateStart}}" end="{{pickerData.dateEnd}}" bindchange="bindTimeChange">
+          <text>日期</text>
+        </picker>
+      </view>
+      <view class='picker-item'>
+        <picker mode="pickerData.time" value="{{pickerData.timeValue}}" start="{{pickerData.timeStart}}" end="{{pickerData.timeEnd}}" bindchange="bindTimeChange">
+          <text>时间</text>
+        </picker>
+      </view>
+    </view>
+</template>

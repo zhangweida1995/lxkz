@@ -1,0 +1,10 @@
+<!--components/formPanel.wxml-->
+<view class='form-panel'>
+  <form >
+    <view>
+      <import wx:for="{{imports}}" wx:key="*this" :src="{{item}}" />
+      <template  wx:for="{{formData}}" wx:key="{{index}}" is="{{item.type}}" data="{{...item}}"/>
+    </view>
+  </form>
+</view>
+

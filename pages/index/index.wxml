@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="tab-bar">
+    <i-tabs current="{{ current }}" bindchange="handleChange" color="#55A4F9">
+      <i-tab key="searchCar" title="人找车"></i-tab>
+      <i-tab key="searchMan" title="车找人"></i-tab>
+    </i-tabs>
+  </view>
+  <form-panel form-data="{{formData}}"></form-panel>
+  <i-button type="success" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 立即发布 </i-button>
+</view>

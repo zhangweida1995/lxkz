@@ -1,0 +1,5 @@
+<template name="lx-input">
+    <view>
+      <i-input value="{{value}}" title="{{title}}" placeholder="{{placeholder}}" />
+    </view>
+</template>

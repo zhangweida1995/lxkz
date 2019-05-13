@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "form-panel":"/components/formPanel/formPanel",
+    "i-button": "../../static/dist/button/index",
+    "i-tabs": "../../static/dist/tabs/index",
+    "i-tab": "../../static/dist/tab/index"
+  }
+}

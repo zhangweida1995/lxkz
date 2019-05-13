@@ -1,0 +1,2 @@
+/* components/formComponents/lx-picker/lx-picker.wxss */
+.picker-wrap{display: flex;flex-direction: row}

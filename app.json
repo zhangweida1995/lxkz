@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#409EFF",
+    "navigationBarTitleText": "老乡快走",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#F9F9F9",
+    "selectedColor": "#333",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "发布",
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabs/homepage.png",
+        "selectedIconPath": "static/tabs/homepage_fill.png"
+      },
+      {
+        "text": "大厅",
+        "pagePath": "pages/logs/logs",
+        "iconPath": "static/tabs/manage.png",
+        "selectedIconPath": "static/tabs/manage_fill.png"
+      },
+      {
+        "text": "消息",
+        "pagePath": "pages/logs/logs",
+        "iconPath": "static/tabs/message.png",
+        "selectedIconPath": "static/tabs/message_fill.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/logs/logs",
+        "iconPath": "static/tabs/mine.png",
+        "selectedIconPath": "static/tabs/mine_fill.png"
+      }
+    ]}
+}
