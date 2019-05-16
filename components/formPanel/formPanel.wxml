@@ -4,7 +4,7 @@
     <view>
       <import src="/components/formComponents/lx-input/lx-input.wxml" />
       <import src="/components/formComponents/lx-picker/lx-picker.wxml" />
-      <template  wx:for="{{formData}}" wx:key="{{index}}" is="{{item.type}}" data="{{...item}}"/>
+      <template  wx:for="{{formData}}" wx:key="{{index}}" is="{{item.type}}" data="{{...item}}" bindchange="changeValue"/>
     </view>
   </form>
 </view>

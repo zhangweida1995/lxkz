@@ -2,7 +2,9 @@
   "usingComponents": {
     "form-panel":"/components/formPanel/formPanel",
     "i-button": "../../static/dist/button/index",
+    "i-input": "../../static/dist/input/index",
     "i-tabs": "../../static/dist/tabs/index",
-    "i-tab": "../../static/dist/tab/index"
+    "i-tab": "../../static/dist/tab/index",
+    "i-icon": "../../static/dist/icon/index"
   }
 }

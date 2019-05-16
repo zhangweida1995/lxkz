@@ -28,6 +28,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    changeValue(val){
+      console.log(val)
+      this.triggerEvent('change',val)
+    }
   }
 })

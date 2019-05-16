@@ -3,4 +3,5 @@
 view.formPanel--picker-item{
   width:200px;
   border:1px solid #ccc;
+  font-size:14rpx;
 }

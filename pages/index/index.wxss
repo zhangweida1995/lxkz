@@ -1,3 +1,32 @@
 /**index.wxss**/
-.userinfo {
+.form-wraper{
+   /* border:1px solid red; */
+  /* padding:0 25rpx; */
+}
+.iconfont {
+  font-size:35rpx;
+}
+.flex-row{
+  display:flex;
+  flex-direction: row;
+  margin-left:25rpx;
+  border-bottom:1px solid #eee;
+}
+.picker{
+  padding:38rpx 1rpx;
+}
+
+.picker-text{
+  color:#495060;
+}
+
+.picker-text-r{
+  display:inline-block;
+  width:150rpx;
+  margin-left:75rpx;
+  margin-right:35rpx;
+  padding-left:10rpx;
+}
+.picker-time{
+  margin-left:25rpx;
 }

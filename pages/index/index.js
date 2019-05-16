@@ -21,17 +21,26 @@ Page({
         placeholder: '到哪儿去'
       },
       {
+        type: 'lx-input',
+        value: '',
+        title: '价格',
+        placeholder: '价格'
+      },
+      {
         type:'lx-picker',
-        pickerData:{
-          date:'date',
-          dateValue:'2019-9-1',
-          dateStart:'2000-1-1',
-          dateEnd:'2050-1-1',
-          time:'time',
-          timeValue:'00:00',
-          timeStart:'00:00',
-          timeEnd:'23:59'
-        }
+        label:'日期',
+        mode:'date',
+        value:'2019-9-1',
+        start:'2000-1-1',
+        end:'2050-1-1'
+      },
+      {
+        type: 'lx-picker',
+        label:'时间',
+        mode: 'time',
+        value: '00:00',
+        start: '00:00',
+        end: '23:59'
       }
     ]
   },
@@ -43,18 +52,21 @@ Page({
   },
   handleChange:function({detail}){
 
-    console.log(this.current)
+    console.log(detail)
     this.setData({
       current:detail.key
     })
   },
-  bindDateChange: function (e) {
+  changeValue: function (e) {
+    console.log('picker发送选择改变，携带值为', e)
+  },
+  bindDateChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       date: e.detail.value
     })
   },
-  bindTimeChange: function (e) {
+  bindTimeChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       time: e.detail.value

@@ -4,7 +4,11 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    pickerData:Object
+    mode:String,
+    value:String,
+    start:String,
+    end:String,
+    label:String
   },
 
   /**
@@ -13,16 +17,14 @@ Component({
   data: {
 
   },
-  bindTimeChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      time: e.detail.value
-    })
-  },
+  
   /**
    * 组件的方法列表
    */
   methods: {
-    
+    bindTimeChange: function (e) {
+      console.log('picker发送选择改变，携带值为', e.detail.value)
+      this.triggerEvent('change', e.detail.value)
+    },
   }
 })
