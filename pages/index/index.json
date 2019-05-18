@@ -1,5 +1,7 @@
 {
+  "component": true,
   "usingComponents": {
+    "canlander":"/components/canlander/canlander",
     "form-panel":"/components/formPanel/formPanel",
     "i-button": "../../static/dist/button/index",
     "i-input": "../../static/dist/input/index",

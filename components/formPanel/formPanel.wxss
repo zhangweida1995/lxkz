@@ -1,1 +1,9 @@
 /* components/formPanel.wxss */
+@import '/static/iconfont/iconfont.wxss';
+.form-item {
+  margin-left:25rpx;
+}
+
+.iconfont {
+  font-size:35rpx;
+}

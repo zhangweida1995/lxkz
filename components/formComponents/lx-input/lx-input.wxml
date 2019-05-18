@@ -1,5 +1,6 @@
-<template name="lx-input">
-    <view>
-      <i-input value="{{value}}" title="{{title}}" placeholder="{{placeholder}}" />
-    </view>
-</template>
+
+<view class='lx-input'>
+  <view class='iconfont {{icon}}' style="{{iconStyle}}"></view>
+  <view class='lx-label'>{{label}}</view>
+  <input class='lx-value' value="{{value}}" type="{{type}}" placeholder="{{placeholder}}" />
+</view>

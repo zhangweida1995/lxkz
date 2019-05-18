@@ -6,36 +6,6 @@
       <i-tab key="searchMan" title="车找人"></i-tab>
     </i-tabs>
   </view>
-  <!-- <form-panel form-data="{{formData}}" bindchange="changeValue"></form-panel> -->
-  <view class='form-wraper'>
-    <form  bindsubmit="formSubmit" bindreset="formReset">
-      <view class='form-item'>
-      <text class='iconfont icon-coordinates_fill'></text>
-        <i-input name="input" placeholder="请选择您的位置" title="从"/>
-      </view>
-      <view class='form-item'>
-        <i-input name="input" placeholder="您将要到哪里去" title="到"/>
-      </view>
-      <view class="flex-row">
-        <view class='form-item picker'>
-          <picker mode="date" value="{{date}}" start="2019-1-1" end="2049-1-1" bindchange="bindDateChange">
-            <view class="picker-text">
-              <text class="picker-text-l"><text class="iconfont icon-activity"/>日期</text>
-              <text class="picker-text-r">{{date}}</text>
-            </view>
-          </picker>
-        </view>
-        <view class='form-item picker'>
-          <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
-            <view class="picker-text">
-              <text class="picker-text-l iconfont icon-time"></text>
-              <text class="picker-text-r picker-time">{{time}}</text>
-            </view>
-          </picker>
-        </view>
-      </view>
-    </form>
-  </view>
-  <view style="clear:both;"></view>
-  <i-button type="success" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 立即发布 </i-button>
+  <form-panel form-data="{{formData}}"></form-panel>
+  <i-button type="success" bindclick="onPublish"> 立即发布 </i-button>
 </view>

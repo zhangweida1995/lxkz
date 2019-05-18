@@ -1,6 +1,12 @@
 {
   "component": true,
   "usingComponents": {
-    "i-input": "../../static/dist/input/index"
+    "i-input": "../../static/dist/input/index",
+    "canlander":"/components/canlander/canlander",
+    "i-button": "../../static/dist/button/index",
+    "i-tabs": "../../static/dist/tabs/index",
+    "i-tab": "../../static/dist/tab/index",
+    "i-icon": "../../static/dist/icon/index",
+    "lx-input":"/components/formComponents/lx-input/lx-input"
   }
 }

@@ -1,0 +1,23 @@
+/* pages/publish.wxss */
+.card-row{
+margin:30rpx;
+}
+.card-car{
+  margin-top:20rpx;
+}
+.btn-row{
+  text-align: center;
+}
+.notice-bar-wraper{
+  margin-top:20rpx;
+  text-align: center;
+}
+.notice-bar-wraper view{
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+.notice-bar-wraper text{
+  display: inline-block;
+  margin:0 auto;
+}

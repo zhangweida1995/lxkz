@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "i-alert": "/static/dist/alert/index",
+    "i-card": "/static/dist/card/index",
+    "i-row": "/static/dist/row/index",
+    "i-col": "/static/dist/col/index",
+    "i-notice-bar": "/static/dist/notice-bar/index",
+    "i-spin": "/static/dist/spin/index",
+    "i-button": "/static/dist/button/index"
+
+  }
+}

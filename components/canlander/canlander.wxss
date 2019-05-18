@@ -1,9 +1,8 @@
-/* components/formComponents/lx-input/lx-input.wxss */
+/* components/canlander/canlander.wxss */
 @import '/static/iconfont/iconfont.wxss';
-.lx-input{
+.lx-canlander{
   display: flex;
   align-items: center;
-  /* border:1px solid #ccc; */
 }
 .lx-label{
   display: inline-block;

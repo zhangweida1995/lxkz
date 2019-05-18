@@ -1,16 +1,20 @@
 // components/formPanel.js
 Component({
+  options: {
+    multipleSlots: true // 在组件定义时的选项中启用多slot支持
+  },
   lifetimes:{
     attached(){
-      console.log(this.data.imports)
+      console.log(this.properties.data)
     }
   },
   /**
    * 组件的属性列表
    */
   properties: {
-    formData:{
-      type:Array
+    formData: {
+      type: Array,
+      value:[],
     }
   },
 
@@ -18,19 +22,15 @@ Component({
    * 组件的初始数据
    */
   data: {
-    imports:[
-      { url: "/components/formComponents/lx-input/lx-input.wxml" },
-      { url: "/components/formComponents/lx-picker/lx-picker.wxml"}
-    ]
+    
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    changeValue(val){
-      console.log(val)
-      this.triggerEvent('change',val)
+    getarr(){
+      console.log(this.properties.formData)
     }
   }
 })

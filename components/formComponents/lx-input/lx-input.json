@@ -1,6 +1,9 @@
 {
   "component": true,
   "usingComponents": {
-    "i-input": "/static/dist/input/index"
+    "i-input": "/static/dist/input/index",
+    "i-icon": "/static/dist/icon/index",
+    "i-row": "/static/dist/row/index",
+    "i-col": "/static/dist/col/index"
   }
 }

@@ -1,13 +1,14 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/publish/publish"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#409EFF",
     "navigationBarTitleText": "老乡快走",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#999",
@@ -39,5 +40,6 @@
         "iconPath": "static/tabs/mine.png",
         "selectedIconPath": "static/tabs/mine_fill.png"
       }
-    ]}
+    ]
+  }
 }

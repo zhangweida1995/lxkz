@@ -4,8 +4,14 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    icon:String,
+    iconStyle:String,
+    label:String,
     value:String,
-    title: String,
+    type:{
+      type:String,
+      value:'text'
+    },
     placeholder: String
   },
 

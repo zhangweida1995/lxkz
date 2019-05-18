@@ -5,42 +5,52 @@ const app = getApp()
 Page({
   data: {
     current:'searchCar',
-    time:'',
-    date:'',
     formData:[
       {
-        type:'lx-input',
+        icon:'icon-location',
+        iconStyle:'color:green',
+        type:'text',
         value:'',
-        title:'从',
-        placeholder:'从哪儿来'
+        label:'从',
+        placeholder:'请选择您的位置'
       },
       {
-        type: 'lx-input',
+        icon:'icon-locationfill',
+        iconStyle:'color:red',
+        type: 'text',
         value: '',
-        title: '到',
-        placeholder: '到哪儿去'
+        label: '到',
+        placeholder: '您将要到哪里去'
       },
       {
-        type: 'lx-input',
+        icon: 'icon-calendar',
+        iconStyle: '',
+        formType: 'canlander'
+      },
+      {
+        icon:'icon-friend',
+        iconStyle:'',
+        type: 'number',
         value: '',
-        title: '价格',
-        placeholder: '价格'
+        label: '人数',
+        placeholder: '输入乘坐的人数'
+      },
+      
+      {
+        icon:'icon-moneybag',
+        iconStyle:'',
+        type: 'number',
+        value: '',
+        label: '价格',
+        placeholder: '输入您的期望价格'
       },
       {
-        type:'lx-picker',
-        label:'日期',
-        mode:'date',
-        value:'2019-9-1',
-        start:'2000-1-1',
-        end:'2050-1-1'
-      },
-      {
-        type: 'lx-picker',
-        label:'时间',
-        mode: 'time',
-        value: '00:00',
-        start: '00:00',
-        end: '23:59'
+        icon:'icon-emoji',
+        iconStyle:'',
+        type: 'textarea',
+        value: '',
+        label: '留言',
+        placeholder: '请留言......'
       }
     ]
   },
@@ -57,19 +67,14 @@ Page({
       current:detail.key
     })
   },
-  changeValue: function (e) {
-    console.log('picker发送选择改变，携带值为', e)
-  },
-  bindDateChange(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      date: e.detail.value
-    })
-  },
-  bindTimeChange(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      time: e.detail.value
+  
+  onPublish(e) {
+    console.log(e)
+    wx.navigateTo({
+      url: '/pages/publish/publish',
+      success(e){
+        console.log(e)
+      }
     })
   },
   onLoad: function () {
