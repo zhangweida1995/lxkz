@@ -29,8 +29,15 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    getarr(){
+    formSubmit(e){
+      console.log(e)
+    },
+    oninput({detail,target}){
+      this.setData({
+        [`formData[${target.id}].value`]:detail.detail.value
+      })
       console.log(this.properties.formData)
+      this.triggerEvent('submit',this.properties.formData)
     }
   }
 })

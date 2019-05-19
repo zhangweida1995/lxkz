@@ -1,8 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "i-input": "../../static/dist/input/index",
-    "canlander":"/components/canlander/canlander",
+    "calendar":"/components/calendar/calendar",
     "i-button": "../../static/dist/button/index",
     "i-tabs": "../../static/dist/tabs/index",
     "i-tab": "../../static/dist/tab/index",

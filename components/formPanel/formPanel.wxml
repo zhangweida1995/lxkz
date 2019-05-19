@@ -2,15 +2,16 @@
   <view class='form-wraper'>
     <form  bindsubmit="formSubmit" bindreset="formReset">
       <view class='form-item' wx:for="{{formData}}" wx:key="{{item.label}}">
-         <lx-input wx:if="{{!item.formType}}" label="{{item.label}}" value="{{item.value}}" type="{{item.type}}" placeholder='{{item.placeholder}}'  icon="{{item.icon}}" iconStyle="{{item.iconStyle}}"></lx-input>
+         <lx-input wx:if="{{!item.formType}}" id="{{index}}" label="{{item.label}}" name="{{item.name}}" value="{{item.value}}" type="{{item.type}}" placeholder='{{item.placeholder}}'  icon="{{item.icon}}" iconStyle="{{item.iconStyle}}" bindoninput="oninput"></lx-input>
 
-        <view wx:elif="{{item.formType=='canlander'}}" class="picker">
-          <canlander class="picker-text-r" icon="{{item.icon}}" iconStyle="{{item.iconStyle}}"></canlander>
+        <view wx:elif="{{item.formType=='calendar'}}" class="picker">
+          <calendar class="picker-text-r" icon="{{item.icon}}" iconStyle="{{item.iconStyle}}"></calendar>
         </view>
       </view>
+     <slot></slot>
+     <!-- <button form-type='submit' type='primary'>立即发布</button> -->
     </form>
   </view>
-  <view style="clear:both;"></view>
 
 
 

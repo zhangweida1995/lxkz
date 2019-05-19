@@ -1,0 +1,23 @@
+
+.bg-color{
+  height:300rpx;
+  width:100%;
+  /* background-color:#409EFF; */
+}
+.bg-color image{
+  width:inherit;
+}
+.container{
+  border-radius: 20rpx;
+  padding:10rpx;
+  background-color:white;
+  box-shadow: 5rpx 5rpx 10rpx #eeeeee;
+  margin:0rpx 20rpx 0 20rpx;
+  position: relative;
+  top:-100rpx;
+  font-size: 27rpx;
+}
+.btn-submit{
+  padding:20rpx;
+  margin-top:0rpx;
+}

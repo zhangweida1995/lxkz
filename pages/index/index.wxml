@@ -1,4 +1,7 @@
 <!--index.wxml-->
+<view class='bg-color'>
+  <image src='/static/images/banner.png' mode="scaleToFill"></image>
+</view>
 <view class="container">
   <view class="tab-bar">
     <i-tabs current="{{ current }}" bindchange="handleChange" color="#55A4F9">
@@ -6,6 +9,9 @@
       <i-tab key="searchMan" title="车找人"></i-tab>
     </i-tabs>
   </view>
-  <form-panel form-data="{{formData}}"></form-panel>
-  <i-button type="success" bindclick="onPublish"> 立即发布 </i-button>
+  <form-panel form-data="{{formData}}" bindsubmit="onPublish"></form-panel>
+  
+</view>
+<view class='btn-submit'>
+  <button form-type='submit' type='primary'>立即发布</button>
 </view>

@@ -2,5 +2,5 @@
 <view class='lx-input'>
   <view class='iconfont {{icon}}' style="{{iconStyle}}"></view>
   <view class='lx-label'>{{label}}</view>
-  <input class='lx-value' value="{{value}}" type="{{type}}" placeholder="{{placeholder}}" />
+  <input class='lx-value' name="{{name}}" value="{{value}}" type="{{type}}" placeholder="{{placeholder}}" bindblur='oninput'/>
 </view>

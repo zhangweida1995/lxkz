@@ -10,6 +10,7 @@ Page({
         icon:'icon-location',
         iconStyle:'color:green',
         type:'text',
+        name:"from",
         value:'',
         label:'从',
         placeholder:'请选择您的位置'
@@ -18,6 +19,7 @@ Page({
         icon:'icon-locationfill',
         iconStyle:'color:red',
         type: 'text',
+        name: "to",
         value: '',
         label: '到',
         placeholder: '您将要到哪里去'
@@ -25,12 +27,13 @@ Page({
       {
         icon: 'icon-calendar',
         iconStyle: '',
-        formType: 'canlander'
+        formType: 'calendar'
       },
       {
         icon:'icon-friend',
         iconStyle:'',
         type: 'number',
+        name: "number",
         value: '',
         label: '人数',
         placeholder: '输入乘坐的人数'
@@ -40,6 +43,7 @@ Page({
         icon:'icon-moneybag',
         iconStyle:'',
         type: 'number',
+        name: "price",
         value: '',
         label: '价格',
         placeholder: '输入您的期望价格'
@@ -48,6 +52,7 @@ Page({
         icon:'icon-emoji',
         iconStyle:'',
         type: 'textarea',
+        name: "remarks",
         value: '',
         label: '留言',
         placeholder: '请留言......'

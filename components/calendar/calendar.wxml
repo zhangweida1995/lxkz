@@ -1,4 +1,4 @@
-<picker class='alarm_picker' mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+<picker class='alarm_picker' mode="multiSelector" name="picker" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
   
   <view class='lx-canlander'>
     <view class='iconfont {{icon}}' style="{{iconStyle}}"></view>

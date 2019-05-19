@@ -7,9 +7,11 @@ Component({
     icon:String,
     iconStyle:String,
     label:String,
+    name:String,
     value:String,
     type:{
       type:String,
+      optionalTypes:[String,Number],
       value:'text'
     },
     placeholder: String
@@ -26,6 +28,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    oninput(e){
+      this.triggerEvent('oninput',e)
+    }
   }
 })
