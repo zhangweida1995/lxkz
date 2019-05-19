@@ -5,7 +5,7 @@ const app = getApp()
 Page({
   data: {
     current:'searchCar',
-    formData:[
+    carFormData:[
       {
         icon:'icon-location',
         iconStyle:'color:green',
@@ -34,7 +34,7 @@ Page({
         iconStyle:'',
         type: 'number',
         name: "number",
-        value: '',
+        value: 1,
         label: '人数',
         placeholder: '输入乘坐的人数'
       },
@@ -57,7 +57,61 @@ Page({
         label: '留言',
         placeholder: '请留言......'
       }
-    ]
+    ],
+    manFormData:[
+      {
+        icon: 'icon-location',
+        iconStyle: 'color:green',
+        type: 'text',
+        name: "from",
+        value: '',
+        label: '从',
+        placeholder: '请选择您的位置'
+      },
+      {
+        icon: 'icon-locationfill',
+        iconStyle: 'color:red',
+        type: 'text',
+        name: "to",
+        value: '',
+        label: '到',
+        placeholder: '您将要到哪里去'
+      },
+      {
+        icon: 'icon-calendar',
+        iconStyle: '',
+        formType: 'calendar'
+      },
+      {
+        icon: 'icon-friend',
+        iconStyle: '',
+        type: 'number',
+        name: "number",
+        value: 4,
+        label: '座位',
+        placeholder: '输入车辆的座位数'
+      },
+
+      {
+        icon: 'icon-moneybag',
+        iconStyle: '',
+        type: 'number',
+        name: "price",
+        value: '',
+        label: '单价',
+        placeholder: '输入单乘客应付的金额'
+      },
+      {
+        icon: 'icon-emoji',
+        iconStyle: '',
+        type: 'textarea',
+        name: "remarks",
+        value: '',
+        label: '留言',
+        placeholder: '请留言......'
+      }
+    ],
+    params:''
   },
   //事件处理函数
   bindViewTap: function() {
@@ -66,18 +120,24 @@ Page({
     })
   },
   handleChange:function({detail}){
-
     console.log(detail)
     this.setData({
       current:detail.key
     })
   },
   
-  onPublish(e) {
-    console.log(e)
+  setParams(value) {
+    console.log(value)
+    this.setData({
+      params:value
+    })
+   
+  },
+  onPublish(){
+    console.log(this.data.params)
     wx.navigateTo({
       url: '/pages/publish/publish',
-      success(e){
+      success(e) {
         console.log(e)
       }
     })

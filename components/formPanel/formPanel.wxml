@@ -9,7 +9,6 @@
         </view>
       </view>
      <slot></slot>
-     <!-- <button form-type='submit' type='primary'>立即发布</button> -->
     </form>
   </view>
 

@@ -18,6 +18,5 @@
   font-size: 27rpx;
 }
 .btn-submit{
-  padding:20rpx;
-  margin-top:0rpx;
+  padding:0 20rpx;
 }
