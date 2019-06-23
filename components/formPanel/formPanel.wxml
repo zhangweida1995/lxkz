@@ -1,54 +1,12 @@
-<!--components/formPanel.wxml-->
-  <view class='form-wraper'>
-    <form  bindsubmit="formSubmit" bindreset="formReset">
-      <view class='form-item' wx:for="{{formData}}" wx:key="{{item.label}}">
-         <lx-input wx:if="{{!item.formType}}" id="{{index}}" label="{{item.label}}" name="{{item.name}}" value="{{item.value}}" type="{{item.type}}" placeholder='{{item.placeholder}}'  icon="{{item.icon}}" iconStyle="{{item.iconStyle}}" bindoninput="oninput"></lx-input>
-
-        <view wx:elif="{{item.formType=='calendar'}}" class="picker">
-          <calendar class="picker-text-r" icon="{{item.icon}}" iconStyle="{{item.iconStyle}}"></calendar>
-        </view>
+<!-- components/formPanel.wxml -->
+<view class='form-wraper'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='form-item' wx:for="{{formData}}" wx:key="{{item.label}}">
+      <lx-input wx:if="{{!item.formType}}" id="{{index}}" label="{{item.label}}" name="{{item.name}}" value="{{item.value}}" type="{{item.type}}" placeholder='{{item.placeholder}}' icon="{{item.icon}}" iconStyle="{{item.iconStyle}}" bindoninput="oninput"></lx-input>
+      <view wx:elif="{{item.formType=='calendar'}}" class="picker">
+        <calendar class="picker-text-r" icon="{{item.icon}}" iconStyle="{{item.iconStyle}}" bindondateTime="onDateTime"></calendar>
       </view>
-     <slot></slot>
-    </form>
-  </view>
-
-
-
-
-
-
-
-
- <!-- <view class='form-item'>
-        <text class='iconfont icon-location' style="color:green;"></text>
-        <i-input name="input" placeholder="请选择您的位置" title="从" class='input-from'/>
-      </view>
-      <view class='form-item'>
-       <text class='iconfont icon-locationfill' style="color:red;"></text>
-        <i-input name="input" placeholder="您将要到哪里去" title="到"/>
-      </view> -->
-      <!-- 日期 -->
-      <!-- <view class='form-item picker'>
-        <view class="picker-text">
-          <text class="iconfont icon-cascades"></text>
-          <text class="picker-text-l">日期</text>
-          <canlander class="picker-text-r"></canlander>
-        </view>
-      </view> -->
-      <!-- 日期end -->
-      <!-- <view class='form-item'>
-        <text class='iconfont icon-friend'></text>
-        <i-input type="number" placeholder="输入乘坐人数" title="人数"/>
-      </view>
-      <view class='form-item'>
-        <text class='iconfont icon-moneybag'></text>
-        <i-input type="number" placeholder="输入您的期望价格" title="价格"/>
-      </view>
-      <view class='form-item'>
-        <text class='iconfont icon-emoji'></text>
-        <text class="picker-text-l">留言</text>
-        <input type="textarea" placeholder="请输入......" title="留言"/>
-      </view> -->
-
-
-
+    </view>
+    <slot></slot>
+  </form>
+</view>

@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "查看启动日志",
-  "usingComponents": {}
+  "usingComponents": {
+    "datepicker": "/miniprogram_npm/miniprogram-datepicker/index"
+  }
 }

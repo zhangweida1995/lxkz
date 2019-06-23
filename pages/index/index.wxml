@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class='bg-color'>
   <image src='/static/images/banner.png' mode="scaleToFill"></image>
 </view>
@@ -9,8 +9,8 @@
       <i-tab key="searchMan" title="车找人"></i-tab>
     </i-tabs>
   </view>
-  <form-panel wx:if="{{current=='searchCar'}}" form-data="{{carFormData}}" bindsubmit="setParams"></form-panel>
-  <form-panel wx:elif="{{current=='searchMan'}}" form-data="{{manFormData}}" bindsubmit="setParams"></form-panel>
+  <form-panel wx:if="{{current=='searchCar'}}" form-data="{{carFormData}}" bindsetValue="setValues"></form-panel>
+  <form-panel wx:elif="{{current=='searchMan'}}" form-data="{{manFormData}}" bindsetValue="setValues"></form-panel>
 </view>
 <view class='btn-submit'>
   <button type='primary' bindtap="onPublish">立即发布</button>

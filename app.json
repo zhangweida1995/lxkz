@@ -10,7 +10,6 @@
     "navigationBarBackgroundColor": "#409EFF",
     "navigationBarTitleText": "老乡快走",
     "navigationBarTextStyle": "white"
-    
   },
   "tabBar": {
     "color": "#999",
@@ -44,9 +43,10 @@
       }
     ]
   },
-  "permission":{
-    "scope.userLocation":{
-      "desc":"我们将获取您的位置以方便您能有更好的使用体验"
+  "permission": {
+    "scope.userLocation": {
+      "desc": "我们将获取您的位置以方便您能有更好的使用体验"
     }
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
