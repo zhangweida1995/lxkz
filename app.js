@@ -36,6 +36,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    defaultCity: '市',
+    defaultCounty: '区'
   }
 })

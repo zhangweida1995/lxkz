@@ -1,11 +1,19 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const {
+  globalData: { defaultCity, defaultCounty }
+} = app
 const { formatTime } = require('../../utils/util')
 const { createFormJson } = require('../../common/createFormJson')
+const { Get, Post } = require('../../service/baseService')
+const { _navgationTo } = require('../../common/route')
+const { pubApi } = require('../../apiConfig/index.js')
 Page({
   data: {
     current: 'searchCar',
+    location: defaultCity,
+    county: defaultCounty,
     carFormData: [
       {
         icon: 'icon-location',
@@ -136,27 +144,14 @@ Page({
     let params = {}
     params.type = this.data.current === 'searchCar' ? 0 : 1
     Object.assign(params, data)
-    console.log(params)
-    wx.request({
-      url: 'http://192.168.43.125:3009/v1/room/createOrder',
-      data: params,
-      method: 'POST',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success(res) {
-        console.log(res)
-      },
-      fail(res) {
-        console.log(res)
-      }
-    })
-    // wx.navigateTo({
-    //   url: '/pages/publish/publish',
-    //   success(e) {
-    //     console.log(e)
-    //   }
-    // })
+    // console.log(params)
+    Post(pubApi.publish, params)
+      .then(res => {
+        _navgationTo(`/pages/publish/publish?data=${JSON.stringify(params)}`)
+      })
+      .catch(err => {
+        throw new Error(err)
+      })
   },
   onLoad: function() {
     if (app.globalData.userInfo) {
@@ -185,6 +180,15 @@ Page({
         }
       })
     }
+  },
+  onShow: function() {
+    const {
+      globalData: { defaultCity, defaultCounty }
+    } = app
+    this.setData({
+      location: defaultCity,
+      county: defaultCounty
+    })
   },
   getUserInfo: function(e) {
     console.log(this.data.current)

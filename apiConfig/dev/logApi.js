@@ -1,4 +1,3 @@
 module.exports = {
-  getList: '/weixin/query',
-  testList: '/test'
+  getList: '/weixin/query'
 }

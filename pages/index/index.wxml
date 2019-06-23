@@ -14,4 +14,5 @@
 </view>
 <view class='btn-submit'>
   <button type='primary' bindtap="onPublish">立即发布</button>
+  <navigator class="location" url="../switchcity/switchcity">{{location}}{{county}}</navigator>
 </view>

@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/publish/publish"
+    "pages/publish/publish",
+    "pages/switchcity/switchcity"
   ],
   "window": {
     "backgroundTextStyle": "light",

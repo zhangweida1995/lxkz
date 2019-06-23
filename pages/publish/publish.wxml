@@ -1,42 +1,66 @@
-<!--pages/publish.wxml-->
+<!-- pages/publish.wxml -->
 <view class='container'>
   <view class='info'>
-    <i-alert type="success" show-icon desc>
-        发布成功
-    </i-alert>
+    <i-alert type="success" show-icon desc>发布成功</i-alert>
   </view>
   <view class='card-wraper'>
-    <i-card title="人找车" extra="" thumb="">
-        <view slot="content">
-          <i-row class="card-row">
-            <i-col span="4"><text>出发地:</text></i-col>
-            <i-col span="20"><text>上海普陀区枣阳路182号汾河大酒店</text></i-col>
-          </i-row>
-          <i-row class="card-row">
-            <i-col span="4"><text>目的地:</text></i-col>
-            <i-col span="20"><text>山东省菏泽市鄄城县</text></i-col>
-          </i-row>
-          <i-row class="card-row">
-            <i-col span="4"><text>日期:</text></i-col>
-            <i-col span="20"><text>2019年5月12日18:00分</text></i-col>
-          </i-row>
-          <i-row class="card-row">
-            <i-col span="4"><text>人数:</text></i-col>
-            <i-col span="8"><text>1人</text></i-col>
-            <i-col span="4"><text>总价:</text></i-col>
-            <i-col span="8"><text>160元</text></i-col>
-          </i-row>
-          <i-row class="card-row">
-            <i-col span="4"><text>留言:</text></i-col>
-            <i-col span="20"><text>行李不多，希望准时送达。。。</text></i-col>
-          </i-row>
-        </view>
-        <view slot="footer"></view>
+    <i-card title="{{data.type==0?'人找车':'车找人'}}" extra="" thumb="">
+      <view slot="content">
+        <i-row class="card-row">
+          <i-col span="4">
+            <text>出发地:</text>
+          </i-col>
+          <i-col span="20">
+            <text>{{dataInfo.started}}</text>
+          </i-col>
+        </i-row>
+        <i-row class="card-row">
+          <i-col span="4">
+            <text>目的地:</text>
+          </i-col>
+          <i-col span="20">
+            <text>{{dataInfo.ended}}</text>
+          </i-col>
+        </i-row>
+        <i-row class="card-row">
+          <i-col span="4">
+            <text>日期:</text>
+          </i-col>
+          <i-col span="20">
+            <text>{{dataInfo.beginTime}}</text>
+          </i-col>
+        </i-row>
+        <i-row class="card-row">
+          <i-col span="4">
+            <text>人数:</text>
+          </i-col>
+          <i-col span="8">
+            <text>{{dataInfo.number}}人</text>
+          </i-col>
+          <i-col span="4">
+            <text>总价:</text>
+          </i-col>
+          <i-col span="8">
+            <text>{{dataInfo.price}}元</text>
+          </i-col>
+        </i-row>
+        <i-row class="card-row">
+          <i-col span="4">
+            <text>留言:</text>
+          </i-col>
+          <i-col span="20">
+            <text>{{dataInfo.remarks}}</text>
+          </i-col>
+        </i-row>
+      </view>
+      <view slot="footer"></view>
     </i-card>
   </view>
   <view class='notice-bar-wraper'>
     <i-notice-bar class="">
-      <view><text>------------------为您匹配到以下老乡------------------</text></view>
+      <view>
+        <text>------------------为您匹配到以下老乡------------------</text>
+      </view>
     </i-notice-bar>
   </view>
   <view class="container">
@@ -44,39 +68,70 @@
   </view>
   <view class='card-wraper card-car'>
     <i-card title="车找人" extra="" thumb="">
-        <view slot="content">
-          <i-row class="card-row">
-            <i-col span="4"><text>出发地:</text></i-col>
-            <i-col span="20"><text>上海普陀区</text></i-col>
-          </i-row>
-          <i-row class="card-row">
-            <i-col span="4"><text>目的地:</text></i-col>
-            <i-col span="20"><text>山东省菏泽市</text></i-col>
-          </i-row>
-          <i-row class="card-row">
-            <i-col span="4"><text>日期:</text></i-col>
-            <i-col span="20"><text>2019年5月12日18:00分</text></i-col>
-          </i-row>
-          <i-row class="card-row">
-            <i-col span="4"><text>座位数:</text></i-col>
-            <i-col span="8"><text>4座</text></i-col>
-            <i-col span="4"><text>单价:</text></i-col>
-            <i-col span="8"><text>160元</text></i-col>
-          </i-row>
-          <i-row class="card-row">
-            <i-col span="4"><text>留言:</text></i-col>
-            <i-col span="20"><text>普陀区附近可接送</text></i-col>
-          </i-row>
-        </view>
-        <view slot="footer">
-          <i-row class="btn-row">
-            <i-col span="6"><i-button bind:click="handleClick" type="success" size="small">打电话</i-button></i-col>
-            <i-col span="6"><i-button bind:click="handleClick" type="primary" size="small">加微信</i-button></i-col>
-            <i-col span="6"><i-button bind:click="handleClick" type="info" size="small">看详情</i-button></i-col>
-            <i-col span="6"><i-button bind:click="handleClick" type="warning" size="small">就选Ta</i-button></i-col>
-          </i-row>
-        </view>
+      <view slot="content">
+        <i-row class="card-row">
+          <i-col span="4">
+            <text>出发地:</text>
+          </i-col>
+          <i-col span="20">
+            <text>上海普陀区</text>
+          </i-col>
+        </i-row>
+        <i-row class="card-row">
+          <i-col span="4">
+            <text>目的地:</text>
+          </i-col>
+          <i-col span="20">
+            <text>山东省菏泽市</text>
+          </i-col>
+        </i-row>
+        <i-row class="card-row">
+          <i-col span="4">
+            <text>日期:</text>
+          </i-col>
+          <i-col span="20">
+            <text>2019年5月12日18:00分</text>
+          </i-col>
+        </i-row>
+        <i-row class="card-row">
+          <i-col span="4">
+            <text>座位数:</text>
+          </i-col>
+          <i-col span="8">
+            <text>4座</text>
+          </i-col>
+          <i-col span="4">
+            <text>单价:</text>
+          </i-col>
+          <i-col span="8">
+            <text>160元</text>
+          </i-col>
+        </i-row>
+        <i-row class="card-row">
+          <i-col span="4">
+            <text>留言:</text>
+          </i-col>
+          <i-col span="20">
+            <text>普陀区附近可接送</text>
+          </i-col>
+        </i-row>
+      </view>
+      <view slot="footer">
+        <i-row class="btn-row">
+          <i-col span="6">
+            <i-button bind:click="handleClick" type="success" size="small">打电话</i-button>
+          </i-col>
+          <i-col span="6">
+            <i-button bind:click="handleClick" type="primary" size="small">加微信</i-button>
+          </i-col>
+          <i-col span="6">
+            <i-button bind:click="handleClick" type="info" size="small">看详情</i-button>
+          </i-col>
+          <i-col span="6">
+            <i-button bind:click="handleClick" type="warning" size="small">就选Ta</i-button>
+          </i-col>
+        </i-row>
+      </view>
     </i-card>
   </view>
 </view>
-
