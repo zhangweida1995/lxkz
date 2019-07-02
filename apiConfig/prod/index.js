@@ -9,6 +9,16 @@ function joinUrl(someApi) {
 joinUrl(logApi)
 joinUrl(pubApi)
 
+/*
+
+const files = require.context('./',false,/\.js$/)
+files.keys().forEach(key=>{
+	let fileApi = key.replace(/(\.\/|\.js)/g, '')
+	joinUrl(fileApi)
+})
+
+*/
+
 module.exports = {
   logApi,
   pubApi
